@@ -1,0 +1,17 @@
+<div class = "container">
+    <h4> Update A Restaurant</h4>
+    
+    <form (submit)= "editRestaurant()">  
+        <input type = "text" class = "form-control col-6 mb-2" name = "restaurant.restaurant" [(ngModel)] ="restaurant.restaurant">
+        <p class = "text-danger"> {{ err.restaurant }}</p>
+       
+        <input type = "text" class = "form-control col-6 mb-2" name = "restaurant.cuisine" [(ngModel)] ="restaurant.cuisine">
+        <p class = "text-danger"> {{ err.cuisine }}</p>
+
+        <input type = "submit" class = "btn btn-info" > 
+
+ 
+    </form>
+
+
+</div>

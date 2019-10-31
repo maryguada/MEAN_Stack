@@ -1,0 +1,26 @@
+<h4 class = "text-center"> Restaurant List  </h4>
+<table class="table">
+        <thead>
+          <tr>
+            
+            <th scope="col"> Restaurant </th>
+            <th scope="col"> Cuisine </th>
+            
+            <th scope="col"> Actions</th>
+
+          </tr>
+        </thead>
+        <tbody *ngIf="restaurants!=undefined">
+          <tr *ngFor= "let restaurant of restaurants">
+            
+            <td>{{ restaurant.restaurant }}</td>
+            <td>{{ restaurant.cuisine }}</td>
+        
+            <td> 
+                <a [routerLink]="['/show/'+restaurant._id]" class = "btn btn-secondary"> Show Info </a>
+                <a [routerLink]="['/edit/'+restaurant._id]"class = "btn btn-warning">  Update </a>
+                <a (click)="deleteRestaurant(restaurant._id)"class = "btn btn-info"> Delete </a>
+            </td>
+            </tr>
+        </tbody>
+        </table>

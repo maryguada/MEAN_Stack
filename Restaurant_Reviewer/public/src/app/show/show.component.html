@@ -1,0 +1,19 @@
+<div class="container">
+    <h3 class ="text-center">Restaurant Information </h3> 
+    <p class ="text-center"> Name: {{ restaurant.restaurant }}</p>
+    <p class ="text-center"> Type: {{ restaurant.cuisine }}</p>
+    
+    
+    <h3> Reviews </h3>
+    <div *ngFor = "let review of restaurant.review">
+        <p> Restaurant Name: {{ review.name }} </p>
+        <p> Review Content: {{ review.content }}</p>
+        <p> Rating: {{ review.rating }}</p>
+    
+    
+    </div>
+    </div>
+    
+    
+    <button class ="btn btn-warning" [routerLink]="['/review/'+restaurant._id]" > Add A Review </button>
+    

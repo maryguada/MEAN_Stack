@@ -1,0 +1,12 @@
+<h3> Add a Review </h3>
+
+<form (submit) ="onSubmit()" >
+
+    
+    <input type = "text" name = "review.name"class = "form-control col-6 mb-2" [(ngModel)] ="review.name" placeholder="Name">
+    <input type = "text" name = "review.content"class = "form-control col-6 mb-2" [(ngModel)] ="review.content" placeholder="Content">
+    <input type = "text" name = "review.rating"class = "form-control col-3 mb-2" [(ngModel)] ="review.rating" placeholder="Rating">
+
+    <input type = "submit" class = "btn btn-secondary"> 
+
+</form>
